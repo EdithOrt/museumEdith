@@ -1,0 +1,226 @@
+/* ESTILOS A INDEX */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+$percent: 100%;
+
+//AQUÍ COMIENZA EL CUERPO DEL INDEX
+
+.titleSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  color: #26282b;
+  font-size: 18px;
+  text-align: center;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  h2{
+    font-weight: 800;
+  }
+}
+
+.hero {
+  .videoContainer {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+  .containerInfo {
+    position: absolute;
+    z-index: 2;
+    width: $percent;
+    top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    article {
+      font-size: 40px;
+      color: white;
+      width: $percent - 40;
+      margin-bottom: 30px;
+      h1 {
+        font-weight: 800;
+        -webkit-animation: tracking-in-contract-bck 1s
+          cubic-bezier(0.215, 0.61, 0.355, 1) both;
+        animation: tracking-in-contract-bck 1s
+          cubic-bezier(0.215, 0.61, 0.355, 1) both;
+      }
+    }
+    div {
+      margin-top: $percent - 95;
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        border: solid 1px white;
+        text-align: center;
+        padding: 10px 50px;
+        &:hover {
+          color: #ffea3a;
+          border: solid 1px #ffea3a;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    .containerInfo {
+      top: 300px;
+    }
+  }
+}
+
+.sectionInfo {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto 1fr;
+  grid-template-areas:
+    "rightDescription"
+    "imageLeft"
+    "leftDescription"
+    "imageRight";
+  img {
+    width: 100vw;
+  }
+  .rightDescription,
+  .leftDescription {
+    padding: 30px;
+  }
+  .leftDescription {
+    margin-top: 50px;
+  }
+  div {
+    h3 {
+      color: #0009cd;
+      font-weight: 800;
+      margin: 0px 0px 20px 0px;
+      text-transform: uppercase;
+    }
+    p {
+      line-height: 20px;
+      color: #26282b;
+    }
+  }
+}
+
+#imageLeft {
+  grid-area: imageLeft;
+}
+.rightDescription {
+  grid-area: rightDescription;
+}
+.leftDescription {
+  grid-area: leftDescription;
+}
+#imageRight {
+  grid-area: imageRight;
+}
+
+@media only screen and (min-width: 768px) {
+  .titleSection {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .sectionInfo {
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "imageLeft rightDescription"
+      "leftDescription imageRight";
+    img {
+      width: $percent;
+    }
+    div {
+      h3 {
+        margin: 0 0 10px 0;
+      }
+    }
+    .leftDescription {
+      margin-top: 0px;
+    }
+  }
+}
+
+// ANIMACIÓN DE TÍTULO EN TITLE SECTION
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+//ANIMACIUÓN PARA TEXTO EN HERO
+
+@-webkit-keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+    transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+    transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}

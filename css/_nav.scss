@@ -1,0 +1,128 @@
+header {
+  nav {
+    background-color: #0009cd;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    animation-name: changeColor;
+    animation-duration: 4s;
+    .socialContainer {
+      display: none;
+      img {
+        height: 15px;
+      }
+    }
+    .logoContainer{
+        width: 200px;
+        img{
+            width: 100%;
+        }
+    }
+    .menu {
+      display: none;
+    }
+    .hamburgerContainer {
+      display: flex;
+      align-items: center;
+      ul {
+        list-style: none;
+        li {
+          a {
+            img {
+              height: 25px;
+            }
+          }
+          &:active {
+            ul {
+              display: block;
+            }
+          }
+          ul {
+            list-style-type: none;
+            display: none;
+            li {
+              padding: 10px 40px;
+              a {
+                text-decoration: none;
+                color: #26282b;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ANIMACIÓN PARA NAV */
+
+@keyframes changeColor {
+  from {
+    background-color: #0009cd;
+  }
+  to {
+    background-color: #26282b;
+  }
+}
+
+//RESPONSIVE
+
+@media only screen and (min-width: 768px) {
+  header nav {
+    padding: 5px 25px 5px 20px;
+    .logoContainer{
+        width: 300px;
+        margin-top: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px){
+    header nav{
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    header nav .socialContainer{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 150px;
+    }
+
+    header nav .logoContainer{
+      margin-left: 70px;
+    }
+  
+    header nav .menu{
+      display: flex;
+      align-items: center;
+    }
+  
+    header nav .menu ul{
+      display: flex;
+      margin-top: 10px;
+    }
+    
+    header nav .menu ul {
+      list-style-type: none;
+    }
+    
+    header nav .menu ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      padding: 10px;
+    }
+    
+    header nav .menu ul li a:hover {
+      text-decoration: none;
+      color: #FFEA3A;
+    }
+  
+    header nav .hamburgerContainer{
+      display: none;
+    }
+  }

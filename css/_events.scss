@@ -1,0 +1,92 @@
+/* ESTILOS A SECCIÓN DE EVENTOS */
+
+.eventsContainer {
+  .cardContainer {
+    width: 80%;
+    margin: 20px;
+    img {
+      width: 100%;
+    }
+    div {
+      padding: 20px;
+      color: #26282b;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      border: solid 1px #26282b;
+      border-style: none solid solid solid;
+      margin-top: -4px;
+      a {
+        text-decoration: none;
+        color: #26282b;
+        font-weight: 600;
+        border: solid 1px #26282b;
+        text-align: center;
+        padding: 10px 0;
+        &:hover {
+          color: #0009cd;
+          border: solid 1px #0009cd;
+        }
+      }
+    }
+  }
+  .titleContainer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    h2{
+      font-weight: 800;
+    }
+  }
+}
+
+/* Grid sección EVENTOS */
+
+.eventsContainer {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 2fr 2fr 2fr 2fr;
+  grid-template-areas:
+    "title"
+    "firstCard"
+    "secondCard"
+    "thirdCard"
+    "fourthCard";
+}
+
+#title-events {
+  grid-area: title;
+}
+#first-card {
+  grid-area: firstCard;
+}
+#second-card {
+  grid-area: secondCard;
+}
+#third-card {
+  grid-area: thirdCard;
+}
+#fourth-card {
+  grid-area: fourthCard;
+}
+
+//Responsive
+
+@media only screen and (min-width: 1024px) {
+  .eventsContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 2fr 2fr;
+    grid-template-areas:
+      "title title"
+      "firstCard secondCard"
+      "thirdCard fourthCard";
+    .cardContainer {
+      width: 432px;
+      margin: 20px;
+    }
+  }
+}

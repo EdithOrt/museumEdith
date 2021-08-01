@@ -1,0 +1,683 @@
+/* ESTILOS A INDEX */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header nav {
+  background-color: #0009CD;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+/* ANIMACIÓN PARA NAV */
+
+@keyframes example {
+  from {background-color: #0009CD;}
+  to {background-color: #26282B;}
+}
+
+
+header nav .socialContainer{
+  display: none;
+}
+
+header nav .socialContainer img{
+  height: 15px; 
+}
+
+header nav .logoContainer img{
+  width: 300px;
+  margin-top: 10px;
+}
+
+header nav .menu{
+  display: none;
+}
+
+header nav .hamburgerContainer{
+  display: flex;
+  align-items: center;
+}
+
+header nav .hamburgerContainer ul{
+  list-style: none;
+}
+
+header nav .hamburgerContainer ul li a img{
+  height: 25px;
+}
+
+header nav .hamburgerContainer ul li ul {
+  list-style-type: none;
+  display: none;
+}
+
+header nav .hamburgerContainer ul li ul li{
+  padding: 10px 40px;
+}
+
+header nav .hamburgerContainer ul li:active ul{
+  display: block;
+}
+
+header nav .hamburgerContainer ul li ul li a{
+  text-decoration: none;
+  color: #26282B;
+  font-weight: 600;
+}
+
+.titleSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  color: #26282B;
+  font-weight: 900;
+  font-size: 18px;
+  text-align: center;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.hero .videoContainer{
+  position: relative;
+}
+
+.hero .videoContainer::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.hero .containerInfo{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px){
+  .hero .containerInfo{
+    top: 45%;
+  }
+}
+
+.hero .containerInfo article{
+  font-size: 40px;
+  color: white;
+  width: 60%;
+  margin-bottom: 30px;
+}
+
+.hero .containerInfo article h1{
+	-webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+            transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+            transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.hero .containerInfo div{
+  margin-top: 5%;
+}
+
+.hero .containerInfo div a{
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  border: solid 1px white;
+  text-align: center;
+  padding: 10px 50px;
+}
+
+.hero .containerInfo div a:hover{
+  color: #FFEA3A;
+  border: solid 1px #FFEA3A;
+}
+
+.sectionInfo{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto 1fr;
+  grid-template-areas:
+  "rightDescription"
+  "imageLeft"
+  "leftDescription"
+  "imageRight"
+  ;
+}
+
+.sectionInfo #imageLeft{
+  grid-area: imageLeft;
+}
+
+.sectionInfo .rightDescription{
+  grid-area: rightDescription;
+}
+
+.sectionInfo .leftDescription{
+  grid-area: leftDescription;
+}
+
+.sectionInfo .imageRight{
+  grid-area: imageRight;
+}
+
+.sectionInfo img{
+  width: 100vw;
+}
+
+.sectionInfo .rightDescription, .sectionInfo .leftDescription{
+  padding: 30px;
+}
+
+.sectionInfo .leftDescription{
+  margin-top: 50px;
+}
+
+.sectionInfo div h3{
+  color: #0009CD;
+  font-weight: 800;
+  margin: 0px 0px 20px 0px;
+  text-transform: uppercase;
+}
+
+.sectionInfo div p {
+  line-height: 20px;
+  color: #26282B;
+}
+
+footer {
+  background-color: #0009CD;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px 20px 15px;
+}
+
+footer .socialContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 15%;
+  min-width: 100px;
+}
+
+footer .socialContainer a img{
+  height: 15px;
+}
+
+footer .logoContainer img{
+  width: 250px;
+  margin: 5px 20px;
+}
+
+footer .footerLegend {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px){
+  header nav{
+    padding: 5px 25px 5px 20px;
+  }
+
+  .titleSection {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  header nav{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  header nav .socialContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+  }
+
+  header nav .menu{
+    display: flex;
+    align-items: center;
+  }
+
+  header nav .menu ul{
+    display: flex;
+  }
+  
+  header nav .menu ul {
+    list-style-type: none;
+  }
+  
+  header nav .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+  }
+  
+  header nav .menu ul li a:hover {
+    text-decoration: none;
+    color: #FFEA3A;
+  }
+
+  header nav .hamburgerContainer{
+    display: none;
+  }
+
+  .sectionInfo{
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "imageLeft rightDescription"
+    "leftDescription imageRight"
+    ;
+  }
+
+  .sectionInfo img{
+    width: 100%;
+  }
+
+  .sectionInfo div h3{
+    margin: 0 0 10px 0;
+  }
+
+  .sectionInfo .leftDescription{
+    margin-top: 0px;
+  }
+
+  footer{
+    padding: 20px 40px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ESTILOS A SECCIÓN ACERCA DE NOSOTROS */
+
+.aboutUsContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutUsContainer section.introAboutUs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  padding: 20px;
+}
+
+.aboutUsContainer section.introAboutUs h2{
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+.aboutUsContainer section.descriptionAboutUs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.aboutUsContainer section.descriptionAboutUs article, .aboutUsContainer section.descriptionAboutUs img{
+  width: 90%;
+}
+
+.aboutUsContainer section.descriptionAboutUs article{
+  margin-top: 30px;
+}
+
+.aboutUsContainer section.closingAboutUs{
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0
+}
+
+.aboutUsContainer section.closingAboutUs img{
+  width: 100%;
+}
+
+.aboutUsContainer section.closingAboutUs p{
+  margin: 20px;
+}
+
+@media only screen and (min-width: 1024px){
+  .aboutUsContainer section.descriptionAboutUs{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .aboutUsContainer section.descriptionAboutUs img{
+    width: 45%;
+  }
+  .aboutUsContainer section.descriptionAboutUs article{
+    width: 40%;
+  }
+  .aboutUsContainer section.descriptionAboutUs article p{
+    margin-right: 40px;
+  }
+}
+
+/* ESTILOS A SECCIÓN EXPOSICIONES */
+
+.exhibitionsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exhibitionsContainer section.titleContainer{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.exhibitionsContainer section.cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.exhibitionsContainer  section.cards article.cardContainer{
+  width: 80%;
+  border: solid 1px #26282B;
+  margin-bottom: 50px;
+}
+
+.exhibitionsContainer  section.cards article.cardContainer div.imageContainer{
+  width: 100%;
+  height: 200px;
+}
+
+.exhibitionsContainer  section.cards article.cardContainer div.imageContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.exhibitionsContainer  section.cards article.cardContainer div.descriptionContainer{
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.exhibitionsContainer  section.cards article.cardContainer div.descriptionContainer div {
+  color: #26282B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.exhibitionsContainer  section.cards article.cardContainer div.descriptionContainer div h3{
+  margin-bottom: 20px;
+}
+
+.exhibitionsContainer  section.cards article.cardContainer div.descriptionContainer div p{
+  width: 90%;
+}
+
+.exhibitionsContainer  section.cards article.cardContainer div.descriptionContainer a{
+  text-decoration: none;
+  color: #26282B;
+  font-weight: 600;
+  border: solid 1px #26282B;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.exhibitionsContainer  section.cards article.cardContainer div.descriptionContainer a:hover{
+  color: #0009CD;
+  border: solid 1px #0009CD;
+}
+
+/* ESTILOS A SECCIÓN DE EVENTOS */
+
+.eventsContainer .cardContainer{
+  width: 80%;
+  margin: 20px
+}
+
+.eventsContainer .titleContainer{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.eventsContainer .cardContainer img {
+  width: 100%;
+}
+
+.eventsContainer .cardContainer div {
+  padding: 20px;
+  color: #26282B;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: solid 1px #26282B;
+  border-style: none solid solid solid;
+  margin-top: -4px;
+}
+
+.eventsContainer .cardContainer div a {
+  text-decoration: none;
+  color: #26282B;
+  font-weight: 600;
+  border: solid 1px #26282B;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.eventsContainer .cardContainer div a:hover{
+  color: #0009CD;
+  border: solid 1px #0009CD;
+}
+
+/* Grid sección EVENTOS */
+
+.eventsContainer {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 2fr 2fr 2fr 2fr;
+  grid-template-areas: 
+  "title"
+  "firstCard"
+  "secondCard"
+  "thirdCard"
+  "fourthCard"
+  ;
+}
+
+.eventsContainer #title-events{
+  grid-area: title;
+}
+
+.eventsContainer #first-card{
+  grid-area: firstCard;
+}
+
+.eventsContainer #second-card{
+  grid-area: secondCard;
+}
+
+.eventsContainer #third-card{
+  grid-area: thirdCard;
+}
+
+.eventsContainer #fourth-card{
+  grid-area: fourthCard;
+}
+
+@media only screen and (min-width: 1024px) {
+  .eventsContainer{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 2fr 2fr;
+    grid-template-areas: 
+    "title title"
+    "firstCard secondCard"
+    "thirdCard fourthCard"
+    ;
+  }
+
+  .eventsContainer .cardContainer{
+    width: 432px;
+    margin: 20px
+  }
+}
+
+/* ESTILOS A SECCIÓN DE CONTACTO */
+
+.contactSection{
+  margin: 20px 0px 10px 0px;
+  padding: 20px;
+}
+
+.contactSection .title {
+  color: #0009CD;
+  margin: 0px 0px 20px 0px;
+}
+
+.contactSection form div{
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactSection form div.buttonsContact{
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contactSection form div.buttonsContact input:last-of-type{
+  margin-left: 40px;
+}
+
+.contactSection form div label {
+  font-weight: 600;
+  color: #26282B;
+  margin-bottom: 20px;
+}
+
+.contactSection form div input,
+.contactSection form div select,
+.contactSection form div textarea {
+  font-weight: 600;
+  color: #26282B;
+}
+
+.contactSection form div .inputData{
+  width: 80%;
+  height: 50px;
+}
+
+.contactSection form div textarea{
+  width: 80%;
+  height: 200px;
+}
+
+.contactSection form div textarea {
+  font-family: "Roboto", sans-serif;
+}
+
+.contactSection form div .button {
+  background-color: transparent;
+  border: 1px solid #26282B;
+  padding: 15px;
+}
+
+.contactSection form div .button:hover {
+  color: #0009CD;
+  background-color: transparent;
+  border: 1px solid #0009CD;
+  padding: 15px;
+}
