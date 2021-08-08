@@ -1,7 +1,7 @@
 {
   "name": "museumortiz",
   "version": "1.0.0",
-  "description": "",
+  "description": "El Museo de Arte Popular es una institución dedicada a promover y preservar el arte popular mexicano.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
